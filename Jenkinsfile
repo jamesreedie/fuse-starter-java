@@ -146,9 +146,6 @@ def isDeployBranch() {
 }
 
 def notifySlack(titlePrefix, channel, color, alertChannel) {
-    if (!isDeployBranch()) {
-      return
-    }
 
     def messageText
     script {
