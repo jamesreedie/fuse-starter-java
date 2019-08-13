@@ -17,7 +17,7 @@ public class PriceController extends BaseRestController {
   @RequestMapping("/prices")
   public String hello(@RequestParam(value = "stock") final String stock,
       @RequestParam(value = "numDays") final String numDays) {
-    return stock + ", " + numDays + "\t";
+    return stock + ", " + numDays;
   }
 
 }
