@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import springfox.documentation.spring.web.json.Json;
 
-@FeignClient(name="Alphavantage", url="https://www.alphavantage.co")
+@FeignClient(name="Alphavantage", url="${spring.rest.alphavantageBasePath}")
 public interface AlphavantageClient {
 
   @GetMapping("/query")

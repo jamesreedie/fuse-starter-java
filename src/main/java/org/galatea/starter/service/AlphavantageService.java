@@ -6,6 +6,7 @@ import org.galatea.starter.domain.ExternalModel;
 import org.galatea.starter.domain.InternalModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,6 +23,9 @@ public class AlphavantageService {
   @Autowired
   AlphavantageClient alphavantageClient;
 
+  public AlphavantageService() {
+
+  }
 
   public ArrayList<InternalModel> query(String stock, ArrayList<String> dates){
     if(dates.size() < 100) {
